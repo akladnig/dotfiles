@@ -1,0 +1,80 @@
+# mkdir command. See wiki if you want it to select created dir
+map a %mkdir<space>
+map <enter> open
+set drawbox true
+set icons true
+set hidden true
+set ignorecase true
+# set previewer ~/.config/lf/pv.sh
+# map i  ~/.config/lf/pv.sh
+# Custom Functions
+cmd open ${{
+    case $(file --mime-type "$f" -bL) in
+        text/*|application/json) $EDITOR "$f";;
+        *) xdg-open "$f" ;;
+    esac
+}}
+
+cmd mkdir ${{
+  printf "Directory Name: "
+  read ans
+  mkdir $ans
+}}
+
+cmd mkfile ${{
+  printf "File Name: "
+  read ans
+  $EDITOR $ans
+}}
+
+cmd rename %mv -i $f $1
+
+# Trash cli bindings
+cmd trash ${{
+  files=$(printf "$fx" | tr '\n' ';')
+  while [ "$files" ]; do
+    # extract the substring from start of string up to delimiter.
+    # this is the first "element" of the string.
+    file=${files%%;*}
+
+    trash-put "$(basename "$file")"
+    # if there's only one element left, set `files` to an empty string.
+    # this causes us to exit this `while` loop.
+    # else, we delete the first "element" of the string from files, and move onto the next.
+    if [ "$files" = "$file" ]; then
+      files=''
+    else
+      files="${files#*;}"
+    fi
+  done
+}}
+
+cmd clear_trash %trash-empty
+
+cmd restore_trash ${{
+  trash-restore
+}}
+
+# Bindings
+# Remove some defaults
+map d
+map m
+
+## Make files and Directories
+map md mkdir
+map mf mkfile
+map r rename
+## Trash Mappings
+map dd trash
+map tc clear_trash
+map tr restore_trash
+
+## Movement
+map gc cd ~/.config
+map gD cd ~/downloads
+map gf cd ~/Documents/Flutter
+map gd cd ~/documents
+map gl cd ~/.local
+# Go to current project
+map gp cd ~/Documents/Tindeq/flutter_tindeq
+map gt cd ~/Documents/Tindeq/flutter_tindeq
