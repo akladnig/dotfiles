@@ -1,57 +1,108 @@
+# taps
 tap "homebrew/bundle"
 tap "homebrew/cask-fonts"
+
 brew "xz"
-brew "webp"
-brew "jpeg-xl"
-brew "aom"
-brew "boost"
-brew "chezmoi"
-brew "cloc"
 brew "openssl@3"
-brew "exa"
-brew "fd"
 brew "harfbuzz"
+brew "libzip"
+brew "readline"
+brew "node"
+brew "zlib"
+
+# Video and Image utils
+brew "ffmpeg"
+brew "aom"
 brew "openjpeg"
 brew "leptonica"
 brew "tesseract"
-brew "ffmpeg"
-brew "fzf"
-brew "go"
-brew "htop"
-brew "libzip"
+brew "jpeg-xl"
+brew "webp"
+
+# Books
+cask "calibre"
+cask "kindle"
+cask "sigil"
+cask "vitalsource-bookshelf"
+cask "adobe-digital-editions"
+
+# Go
 brew "katago"
-brew "lazygit"
-brew "lf"
-brew "libmagic"
-brew "midnight-commander"
-brew "neovim"
-brew "readline"
-brew "nnn"
-brew "node"
-brew "sqlite"
-brew "pipx"
-brew "pyenv"
-brew "ranger"
-brew "ripgrep"
-brew "tcl-tk"
-brew "trash-cli"
-brew "tree"
-brew "wget"
-brew "zlib"
-brew "zsh-syntax-highlighting"
+cask "katrain"
+mas 'SmartGo One', id: 1465746992
+brew "boost"
+
+# Binaries
 cask "alfred"
 cask "anki"
+cask "bitwarden"
 cask "drawio"
+cask "clickup"
+cask "cleanmymac"
+brew "mackup"
+cask "microsoft-word"
+cask "microsoft-excel"
+
+# Terminal and shell
+cask "wezterm"
+brew "ripgrep"
+brew "trash-cli"
+brew "exa"
+brew "tree"
+brew "fd"
+brew "zsh-syntax-highlighting"
+brew "fzf"
+brew "htop"
+
+# lf and preview
+brew "lf"
+brew "jq"
+brew "poppler"
+brew "w3m"
+
+# Editor
+brew "neovim"
+cask "visual-studio-code"
+brew "obsidian"
+
+# Browser, http etc.
+cask "arc"
+cask "chrome"
+cask "firefox"
+brew "wget"
+cask "sabnzbd"
+cask "sonarr"
+cask "radarr"
+
+# Development
+mas "Xcode", id: 497799835
+cask "flutter"
+cask "db-browser-for-sqlite"
+brew "go"
+cask "gpg-suite"
+brew "hugo"
+brew "perl"
+brew "pyenv"
+brew "pipx"
+brew "sqlite"
+
+# Source Code Management
+brew "chezmoi"
+brew "lazygit"
+
+# Fonts
 cask "font-fira-code"
 cask "font-hack-nerd-font"
-cask "font-jetbrains-mono-nerd-font"
+cask "font-jetbrains-mono-nerd-font"ew "openjpeg"
+
 cask "hammerspoon"
-cask "karabiner-elements"
-cask "katrain"
-cask "kindle"
+cask "hyperkey"
 cask "maccy"
-cask "sigil"
-cask "wezterm"
+
+# Utilities
+mas 'Color Picker' id: 1545870783
+brew 'bat'
+
 vscode "aaron-bond.better-comments"
 vscode "ahmadawais.shades-of-purple"
 vscode "alefragnani.rtf"
