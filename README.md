@@ -23,7 +23,8 @@ After backing up your old Mac you may now follow these install instructions to s
   ```
 3. Run the installation with:
 
-  ```zsh ./install.sh
+  ```
+  zsh ./install.sh
   ```
 4. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
 5. Restart your computer to finalize the process
