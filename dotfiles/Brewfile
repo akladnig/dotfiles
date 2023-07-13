@@ -24,7 +24,8 @@ cask "calibre"
 cask "kindle"
 cask "sigil"
 cask "vitalsource-bookshelf"
-cask "adobe-digital-editions"
+# ade needs a password so install manually
+#cask "adobe-digital-editions"
 
 # Go
 brew "katago"
@@ -40,8 +41,8 @@ cask "drawio"
 cask "clickup"
 cask "cleanmymac"
 # brew "mackup"
-cask "microsoft-word"
-cask "microsoft-excel"
+# microsoft-word needs a password 
+# cask "microsoft-excel"
 
 # Terminal and shell
 cask "wezterm"
@@ -63,11 +64,11 @@ brew "w3m"
 # Editor
 brew "neovim"
 cask "visual-studio-code"
-brew "obsidian"
+cask "obsidian"
 
 # Browser, http etc.
 cask "arc"
-cask "chrome"
+cask "google-chrome"
 cask "firefox"
 brew "wget"
 cask "sabnzbd"
@@ -87,7 +88,6 @@ brew "pipx"
 brew "sqlite"
 
 # Source Code Management
-brew "chezmoi"
 brew "lazygit"
 
 # Fonts
