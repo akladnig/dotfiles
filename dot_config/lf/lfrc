@@ -12,7 +12,7 @@ map i  ~/.config/lf/pv.sh
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) $EDITOR "$f";;
-        *) open "$f" ;;
+        *) xdg-open "$f" ;;
     esac
 }}
 

@@ -1,6 +1,7 @@
 #!/bin/sh
-nvim "$1"
-case "$nvim "$1"1" in
+unset COLORTERM
+
+case "$1" in
 *.tar*) tar tf "$1" ;;
 *.zip) unzip -l "$1" ;;
 *.rar) unrar l "$1" ;;
@@ -8,5 +9,5 @@ case "$nvim "$1"1" in
 *.pdf) pdftotext "$1" - ;;
 *.html) w3m "$1" ;;
 *.json) jq -C . "$1" ;;
-*) bat --colour=always "$1" ;;
+*) bat --color=always "$1" ;;
 esac
