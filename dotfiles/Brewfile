@@ -93,14 +93,14 @@ brew "lazygit"
 # Fonts
 cask "font-fira-code"
 cask "font-hack-nerd-font"
-cask "font-jetbrains-mono-nerd-font"ew "openjpeg"
+cask "font-jetbrains-mono-nerd-font"
 
 cask "hammerspoon"
 cask "hyperkey"
 cask "maccy"
 
 # Utilities
-mas 'Color Picker' id: 1545870783
+mas 'Color Picker', id: 1545870783
 brew 'bat'
 
 vscode "aaron-bond.better-comments"
