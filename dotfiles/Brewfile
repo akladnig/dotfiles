@@ -39,7 +39,7 @@ cask "bitwarden"
 cask "drawio"
 cask "clickup"
 cask "cleanmymac"
-brew "mackup"
+# brew "mackup"
 cask "microsoft-word"
 cask "microsoft-excel"
 
@@ -75,7 +75,7 @@ cask "sonarr"
 cask "radarr"
 
 # Development
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
 cask "flutter"
 cask "db-browser-for-sqlite"
 brew "go"

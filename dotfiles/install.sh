@@ -11,9 +11,16 @@ fi
 if test ! $(which brew); then
 	/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 
-	echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>$HOME/.zprofile
+	echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >>~/.zprofile
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
+
+# Check for Chezmoi and install if we don't have it
+
+if test ! $(which chezmoi); then
+	brew install chezmoi
+fi
+chezmoi init --apply akladnig
 
 # Update Homebrew recipes
 brew update
