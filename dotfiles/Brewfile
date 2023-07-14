@@ -93,7 +93,8 @@ brew "sqlite"
 brew "lazygit"
 
 # Fonts
-cask "font-fira-code"
+cask "font-fira-code-nerd-font"
+cask "font-fira-mono-nerd-font"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
 
