@@ -28,8 +28,17 @@ curl https://raw.githubusercontent.com/akladnig/dotfiles/main/dotfiles/install.s
 
 6. Link local documents and desktop folders to iCloud.
 
-7. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+7. Manually install:
+- DXO Labs
+- Photomatix
+- krpano
+- Word
+- Excel
 
-8. Restart your computer to finalize the process
+8. Set up email
+
+9. After mackup is synced with your cloud storage, restore preferences by running `mackup restore`
+
+10. Restart your computer to finalize the process
 
 Your Mac is now ready to use!
