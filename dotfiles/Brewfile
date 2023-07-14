@@ -46,6 +46,7 @@ cask "cleanmymac"
 
 # Terminal and shell
 cask "wezterm"
+cask "warp"
 brew "ripgrep"
 brew "trash-cli"
 brew "exa"
