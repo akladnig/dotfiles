@@ -53,7 +53,8 @@ brew "tree"
 brew "fd"
 brew "zsh-syntax-highlighting"
 brew "fzf"
-brew "htop"
+brew "btop"
+brew "tldr"
 
 # lf and preview
 brew "lf"
