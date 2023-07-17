@@ -32,5 +32,8 @@ brew update
 brew tap homebrew/bundle
 brew bundle --file ./dotfiles/Brewfile
 
+#install cocoapods
+sudo gem install cocoapods
+
 # Set macOS preferences - we will run this last because this will reload the shell
 # source ./.macos

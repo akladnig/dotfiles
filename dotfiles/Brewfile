@@ -25,7 +25,7 @@ cask "kindle"
 cask "sigil"
 cask "vitalsource-bookshelf"
 # ade needs a password so install manually
-#cask "adobe-digital-editions"
+cask "adobe-digital-editions"
 
 # Go
 brew "katago"
@@ -34,6 +34,7 @@ mas 'SmartGo One', id: 1465746992
 brew "boost"
 
 # Binaries
+brew "mas"
 cask "alfred"
 cask "anki"
 mas "bitwarden", id: 1352778147
@@ -41,8 +42,8 @@ cask "drawio"
 cask "clickup"
 cask "cleanmymac"
 # brew "mackup"
-# microsoft-word needs a password 
-# cask "microsoft-excel"
+cask "microsoft-word"
+cask "microsoft-excel"
 
 # Terminal and shell
 cask "wezterm"
@@ -56,6 +57,7 @@ brew "zsh-syntax-highlighting"
 brew "fzf"
 brew "btop"
 brew "tldr"
+brew "zoxide"
 
 # lf and preview
 brew "lf"
@@ -78,7 +80,7 @@ cask "sonarr"
 cask "radarr"
 
 # Development
-# mas "Xcode", id: 497799835
+mas "Xcode", id: 497799835
 cask "flutter"
 cask "db-browser-for-sqlite"
 brew "go"
@@ -90,6 +92,7 @@ brew "pipx"
 brew "sqlite"
 
 # Source Code Management
+brew "chezmoi"
 brew "lazygit"
 
 # Fonts
