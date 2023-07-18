@@ -162,3 +162,5 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/zlib/lib/pkgconfig"
 #     bind '"\C-o":"lfcd\C-m"'  # bash
 #     bindkey -s '^o' 'lfcd\n'  # zsh
 source ~/.config/lf/lfcd.sh
+
+eval "$(zoxide init zsh)"

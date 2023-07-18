@@ -32,8 +32,6 @@ curl https://raw.githubusercontent.com/akladnig/dotfiles/main/dotfiles/install.s
 - DXO Labs
 - Photomatix
 - krpano
-- Word
-- Excel
 
 8. Set up email
 

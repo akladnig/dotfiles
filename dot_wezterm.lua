@@ -48,9 +48,8 @@ wezterm.on("gui-startup", function(cmd)
 	window:gui_window():maximize()
 end)
 
-config.font =
-	-- wezterm.font('JetBrains Mono', { weight = 'Bold', italic = false })
-	wezterm.font("Fira Code", { weight = "Medium", italic = false })
+config.font = wezterm.font("JetBrains Mono", { weight = "Bold", italic = false })
+-- config.font = wezterm.font("FiraCode", { weight = "Medium", italic = false })
 config.font_size = 13
 
 -- and finally, return the configuration to wezterm
