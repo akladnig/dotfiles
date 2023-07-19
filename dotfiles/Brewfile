@@ -64,6 +64,7 @@ brew "lf"
 brew "jq"
 brew "poppler"
 brew "w3m"
+brew "saulpw/vd/visidata"
 
 # Editor
 brew "neovim"
