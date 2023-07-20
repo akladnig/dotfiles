@@ -44,6 +44,7 @@ cask "cleanmymac"
 # brew "mackup"
 cask "microsoft-word"
 cask "microsoft-excel"
+brew  "saulpw/vd/visidata"
 
 # Terminal and shell
 cask "wezterm"
@@ -64,7 +65,6 @@ brew "lf"
 brew "jq"
 brew "poppler"
 brew "w3m"
-brew "saulpw/vd/visidata"
 
 # Editor
 brew "neovim"
