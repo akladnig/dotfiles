@@ -1,0 +1,66 @@
+theme = "catppuccin_mocha"
+
+[editor]
+bufferline = "always"
+cursorline = true
+line-number = "relative"
+mouse = false
+rainbow-brackets = true
+rulers = [120]
+scrolloff = 10
+true-color = true
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+parents = false
+
+[editor.indent-guides]
+character = "⎜"
+render = true
+
+[editor.lsp]
+display-messages = true
+display-inlay-hints = true
+
+[editor.statusline]
+left = ["mode", "spinner", "version-control"]
+center = ["file-name"]
+right = [
+  "diagnostics",
+  "selections",
+  "position",
+  "file-encoding",
+  "file-line-ending",
+  "file-type"
+]
+separator = "|"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.whitespace]
+render = "none"
+
+[keys.normal]
+"ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
+
+[keys.normal.space]
+q = ":quit"
+w = {q = ":write-quit"}
+
+[keys.insert]
+j = { k = "normal_mode" } # Maps `jk` to exit insert mode
+C-l = "move_char_right"
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+pageup = "no_op"
+pagedown = "no_op"
+home = "no_op"
+end = "no_op"

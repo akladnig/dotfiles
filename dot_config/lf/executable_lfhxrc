@@ -1,0 +1,5 @@
+source ~/.config/lf/lfdefrc
+set preview false
+set ratios  1:2
+set drawbox false
+set icons true

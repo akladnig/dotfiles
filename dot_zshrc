@@ -114,14 +114,26 @@ bindkey -s ^a "nvims\n"
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-  export EDITOR='nvim'
+  export EDITOR='hx2'
 # fi
 
 # Preferred Pager for lf
  export PAGER='bat'
 
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
+lfcd () {
+    tmp="$(mktemp)"
+    # `command` is needed in case `lfcd` is aliased to `lf`
+    command lf -last-dir-path="$tmp" "$@"
+    if [ -f "$tmp" ]; then
+        dir="$(cat "$tmp")"
+        rm -f "$tmp"
+        if [ -d "$dir" ]; then
+            if [ "$dir" != "$(pwd)" ]; then
+                cd "$dir"
+            fi
+        fi
+    fi
+}
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -164,3 +176,8 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/zlib/lib/pkgconfig"
 source ~/.config/lf/lfcd.sh
 
 eval "$(zoxide init zsh)"
+
+export HELIX_RUNTIME="$HOME/helix/runtime"
+
+
+source /Users/adrian/.config/broot/launcher/bash/br

@@ -1,0 +1,6 @@
+source ~/.config/lf/lfdefrc
+set preview true
+set previewer ~/.config/lf/pv.sh
+set ratios 1:2:3
+set drawbox true
+set icons true

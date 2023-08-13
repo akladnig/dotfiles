@@ -48,11 +48,9 @@ brew  "saulpw/vd/visidata"
 
 # Terminal and shell
 cask "wezterm"
-cask "warp"
 brew "ripgrep"
 brew "trash-cli"
 brew "exa"
-brew "tree"
 brew "fd"
 brew "zsh-syntax-highlighting"
 brew "fzf"
@@ -67,9 +65,14 @@ brew "poppler"
 brew "w3m"
 
 # Editor
+brew "helix"
+brew "kakoune"
 brew "neovim"
 cask "visual-studio-code"
 cask "obsidian"
+
+# Coding Social
+cask "element"
 
 # Browser, http etc.
 cask "arc"
@@ -90,11 +93,22 @@ brew "hugo"
 brew "perl"
 brew "pyenv"
 brew "pipx"
+brew "rustup"
 brew "sqlite"
+
+# Language Support
+brew "gopls"
+brew "lua-language-server"
+brew "marksman"
+brew "python-lsp-server"
+brew "taplo"
+brew "vscode-langservers-extracted"
+brew "yaml-language-server"
 
 # Source Code Management
 brew "chezmoi"
 brew "lazygit"
+brew "gh"
 
 # Fonts
 cask "font-fira-code-nerd-font"

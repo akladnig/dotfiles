@@ -35,5 +35,10 @@ brew bundle --file ./dotfiles/Brewfile
 #install cocoapods
 sudo gem install cocoapods
 
+go install golang.org/x/tools/gopls@latest          # LSP
+go install github.com/go-delve/delve/cmd/dlv@latest # Debugger
+go install golang.org/x/tools/cmd/goimports@latest  # Formatter
+
 # Set macOS preferences - we will run this last because this will reload the shell
+
 # source ./.macos
