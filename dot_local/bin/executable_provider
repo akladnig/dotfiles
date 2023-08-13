@@ -1,0 +1,9 @@
+
+NAME=$1
+NAME=${NAME:=MyProvider}
+TYPE=$2
+TYPE=${TYPE:=MyType}
+
+echo "final ${NAME}Provider = Provider<${TYPE}>((ref) {"
+echo "	return ${TYPE}();"
+echo "});"

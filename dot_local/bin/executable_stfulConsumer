@@ -1,0 +1,14 @@
+NAME=$1
+NAME=${NAME:=MyWidget}
+
+echo "class ${NAME} extends ConsumerStatefulWidget {"
+echo "		const ${NAME}({super.key});\n"
+echo "		@override"
+echo "		ConsumerState<ConsumerStatefulWidget> createState() => _${NAME}State();"
+echo "}\n"
+echo "class _${NAME}State extends ConsumerState<${NAME}> {\n"
+echo "		@override"
+echo "		Widget build(BuildContext context) {"
+echo "				return Container();"
+echo "		}"
+echo "}"

@@ -1,21 +1,11 @@
 local wezterm = require 'wezterm'
+local helper = require 'helpers'
 
 local act = wezterm.action
 local hx = 'hx2'
-function PaneExists(paneTitle, paneName)
-	return string.find(paneTitle, paneName) ~= nil
-end
-
--- This is the module table that we will export
 
 local module = {}
 
--- define a function in the module table.
--- Only functions defined in `module` will be exported to
--- code that imports this module.
--- The suggested convention for making modules that update
--- the config is for them to export an `apply_to_config`
--- function that accepts the config object, like this:
 function module.apply_to_config(config)
 -- Toggle the explorer (lf) pane on/off 
 -- if lf exists
@@ -35,7 +25,7 @@ function module.apply_to_config(config)
 		for _, paneName in ipairs(panes) do
 			local paneTitle = paneName:get_title()
 			-- if string.find(paneTitle, 'lf') ~= nil then
-			if PaneExists(paneTitle, 'lf') then
+			if helper.PaneExists(paneTitle, 'lf') then
 				explorerPane = paneName
 			end
 		end
@@ -87,7 +77,7 @@ function module.apply_to_config(config)
 		for _, paneName in ipairs(panes) do
 			local paneTitle = paneName:get_title()
 			-- if string.find(paneTitle, 'lf') ~= nil then
-			if PaneExists(paneTitle, 'lf') then
+			if helper.PaneExists(paneTitle, 'lf') then
 				explorerPane = paneName
 			end
 		end
@@ -108,18 +98,18 @@ function module.apply_to_config(config)
 		local activePaneTitle = activePane:get_title()
 		-- Determine which pane is active and then move to the hx pane
 		-- If in the lf pane move right to the hx pane
-		if PaneExists(activePaneTitle, 'lf') then
+		if helper.PaneExists(activePaneTitle, 'lf') then
     	window:perform_action(act.ActivatePaneDirection('Right'), pane)
     end
 
 		activePane = pane:tab():active_pane()
 		activePaneTitle = activePane:get_title()
 		-- if in the hx pane check if a terminal pane is open and open if not
-		if PaneExists(activePaneTitle, hx) then
+		if helper.PaneExists(activePaneTitle, hx) then
 			terminalPane = pane:tab():get_pane_direction('Down')
 		else
 			local hxPane =  pane:tab():get_pane_direction('Up')
-			if  PaneExists(hxPane:get_title(), hx) then
+			if  helper.PaneExists(hxPane:get_title(), hx) then
 				terminalPane = activePane
 			end
 		end

@@ -1,0 +1,7 @@
+
+     echo "Consumer("
+     echo "    builder: (context, ref, child) {"
+     echo "        return value;"
+     echo "    },"
+     echo ")"
+    

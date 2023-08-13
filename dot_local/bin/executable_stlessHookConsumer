@@ -1,0 +1,11 @@
+NAME=$1
+NAME=${NAME:=MyWidget}
+
+echo "class ${NAME} extends HookConsumerWidget {"
+echo "		const ${NAME}({super.key});\n"
+echo "		@override"
+echo "		Widget build(BuildContext context, WidgetRef ref) {"
+echo "				return Container();"
+echo "		}"
+echo "}"
+    
