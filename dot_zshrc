@@ -104,7 +104,7 @@ bindkey -s ^a "nvims\n"
 # if [[ -n $SSH_CONNECTION ]]; then
 #   export EDITOR='vim'
 # else
-  export EDITOR='hx2'
+  export EDITOR='hx'
 # fi
 
 # Preferred Pager for lf
