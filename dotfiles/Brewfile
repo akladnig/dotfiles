@@ -52,11 +52,13 @@ brew "ripgrep"
 brew "trash-cli"
 brew "exa"
 brew "fd"
+brew "sd"
 brew "zsh-syntax-highlighting"
 brew "fzf"
 brew "btop"
 brew "tldr"
 brew "zoxide"
+brew "zsh-vi-mode"
 
 # lf and preview
 brew "lf"
