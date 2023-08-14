@@ -9,10 +9,12 @@ function ResetExplorer(window, pane)
   local ratiosStr = ':set ratios 1:2:3\n'
   local drawboxStr = ':set drawbox true\n'
   local previewStr = ':set preview true\n'
+  local previewerStr = ':set previewer ~/.config/lf/pv.sh\n'
 
   window:perform_action(act.SendString(ratiosStr), pane)
   window:perform_action(act.SendString(drawboxStr), pane)
   window:perform_action(act.SendString(previewStr), pane)
+  window:perform_action(act.SendString(previewerStr), pane)
 end
 
 local module = {}
