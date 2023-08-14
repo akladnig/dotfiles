@@ -1,0 +1,34 @@
+os:
+  editPreset: 'helix'
+  # edit: 'hx2 -- {{filename}}'
+  # editAtLine: "hx2 -- {{filename}}:{{line}}"
+  # editAtLineAndWait: "hx2 -- {{filename}}:{{line}}"
+  # editInTerminal: true 
+  # openDirInEditor: "hx2 -- {{dir}}"
+  open: 'hx -- {{filename}}'
+
+gui:
+  nerdFontsVersion: "3"
+  theme:
+    activeBorderColor:
+      - green
+      - bold
+    inactiveBorderColor:
+      - white
+    searchingActiveBorderColor:
+      - cyan
+      - bold
+    optionsTextColor:
+      - blue
+    cherryPickedCommitBgColor:
+      - cyan
+    cherryPickedCommitFgColor:
+      - blue
+    unstagedChangesColor:
+      - red
+    defaultFgColor:
+      - default    
+    selectedLineBgColor:
+      - '#382c6d'
+    selectedRangeBgColor:
+      - '#382c6d'

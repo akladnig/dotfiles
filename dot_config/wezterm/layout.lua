@@ -2,7 +2,7 @@ local wezterm = require 'wezterm'
 local helper = require 'helpers'
 
 local act = wezterm.action
-local hx = 'hx2'
+local hx = 'hx'
 
 local module = {}
 

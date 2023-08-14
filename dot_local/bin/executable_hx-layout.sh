@@ -6,7 +6,6 @@ lf_pane=$(wezterm cli split-pane --left --cells 60)
 echo "lf -config ~/.config/lf/lfhxrc" | wezterm cli send-text --pane-id $lf_pane --no-paste
 t_pane=$(wezterm cli split-pane --bottom --cells 1)
 wezterm cli activate-pane-direction up
-# echo "hx2\n" | wezterm cli send-text --pane-id $hx_pane --no-paste
-echo "hx2 ." | wezterm cli send-text --no-paste
+echo "hx ." | wezterm cli send-text --no-paste
 wezterm cli activate-pane-direction left
 
