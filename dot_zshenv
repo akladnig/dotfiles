@@ -1,0 +1,22 @@
+#!/usr/bin/env zsh
+
+. "$HOME/.cargo/env"
+
+# ZSH
+export ZDOTDIR="$HOME/.config/zsh"
+export HISTSIZE=10000                   # Maximum events for internal history
+export SAVEHIST=10000                   # Maximum events in history file
+
+# editor
+export EDITOR="hx"
+export VISUAL="hx"
+export HELIX_RUNTIME="$HOME/helix/runtime"
+
+
+# Set path for LazyGit config
+export XDG_CONFIG_HOME="$HOME/.config"
+
+
+# Preferred Pager for lf
+ export PAGER='bat'
+
