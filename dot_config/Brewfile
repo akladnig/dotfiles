@@ -28,13 +28,12 @@ cask "vitalsource-bookshelf"
 cask "adobe-digital-editions"
 
 # Go
+brew "boost"
 brew "katago"
 cask "katrain"
 mas 'SmartGo One', id: 1465746992
-brew "boost"
 
 # Binaries
-brew "mas"
 cask "alfred"
 cask "anki"
 mas "bitwarden", id: 1352778147
@@ -42,22 +41,25 @@ cask "drawio"
 cask "clickup"
 cask "cleanmymac"
 # brew "mackup"
+brew "mas"
 cask "microsoft-word"
 cask "microsoft-excel"
 brew  "saulpw/vd/visidata"
 
 # Terminal and shell
-cask "wezterm"
-brew "ripgrep"
-brew "trash-cli"
+brew "btop"
 brew "exa"
 brew "fd"
-brew "sd"
-brew "zsh-syntax-highlighting"
 brew "fzf"
-brew "btop"
+brew "romkatv/powerlevel10k/powerlevel10k"
+brew "ripgrep"
+brew "sd"
 brew "tldr"
+brew "trash-cli"
+cask "wezterm"
 brew "zoxide"
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
 brew "zsh-vi-mode"
 
 # lf and preview
@@ -70,33 +72,33 @@ brew "w3m"
 brew "helix"
 brew "kakoune"
 brew "neovim"
-cask "visual-studio-code"
 cask "obsidian"
+cask "visual-studio-code"
 
 # Coding Social
 cask "element"
 
 # Browser, http etc.
 cask "arc"
-cask "google-chrome"
 cask "firefox"
-brew "wget"
+cask "google-chrome"
+cask "radarr"
 cask "sabnzbd"
 cask "sonarr"
-cask "radarr"
+brew "wget"
 
 # Development
-mas "Xcode", id: 497799835
-cask "flutter"
 cask "db-browser-for-sqlite"
+cask "flutter"
 brew "go"
 cask "gpg-suite"
 brew "hugo"
 brew "perl"
-brew "pyenv"
 brew "pipx"
+brew "pyenv"
 brew "rustup"
 brew "sqlite"
+mas "Xcode", id: 497799835
 
 # Language Support
 brew "gopls"
@@ -109,8 +111,9 @@ brew "yaml-language-server"
 
 # Source Code Management
 brew "chezmoi"
-brew "lazygit"
+brew "delta"
 brew "gh"
+brew "lazygit"
 
 # Fonts
 cask "font-fira-code-nerd-font"
