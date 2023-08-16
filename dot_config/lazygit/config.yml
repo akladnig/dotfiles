@@ -5,6 +5,11 @@ os:
   editAtLineAndWait: "~/.cargo/bin/hx -- {{filename}}:{{line}}"
   editInTerminal: true 
 
+git:
+  paging:
+    colorArg: always
+    pager: delta --dark --paging=never
+
 gui:
   nerdFontsVersion: "3"
   theme:
