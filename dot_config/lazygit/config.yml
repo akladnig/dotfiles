@@ -1,11 +1,9 @@
 os:
-  editPreset: 'helix'
-  # edit: 'hx2 -- {{filename}}'
-  # editAtLine: "hx2 -- {{filename}}:{{line}}"
-  # editAtLineAndWait: "hx2 -- {{filename}}:{{line}}"
-  # editInTerminal: true 
-  # openDirInEditor: "hx2 -- {{dir}}"
-  open: 'hx -- {{filename}}'
+  # editPreset: 'helix'
+  edit: '~/.cargo/bin/hx -- {{filename}}'
+  editAtLine: "~/.cargo/bin/hx -- {{filename}}:{{line}}"
+  editAtLineAndWait: "~/.cargo/bin/hx -- {{filename}}:{{line}}"
+  editInTerminal: true 
 
 gui:
   nerdFontsVersion: "3"

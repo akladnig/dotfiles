@@ -1,7 +1,9 @@
 lastupdatecheck: 0
 recentrepos:
+- /Users/adrian/.local/share/chezmoi
 - /Users/adrian/Documents/Flutter/quick_blue
 startuppopupversion: 5
-customcommandshistory: []
+customcommandshistory:
+- q
 hidecommandlog: false
 ignorewhitespaceindiffview: false
