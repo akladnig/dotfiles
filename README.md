@@ -2,9 +2,9 @@
 
 ## Introduction
 
-This repository serves as my way to help me remember how to setup and maintain my 2017 27" iMac and my two macBook Airs. It takes the effort out of installing everything manually - where possible apps are installed using [[Homebrew]]. Almost everything needed to install my preferred setup of macOS is detailed in this readme.
+This repository serves as my way to help me remember how to setup and maintain my 2017 27" iMac and my two macBook Airs. It takes the effort out of installing everything manually - where possible apps are installed using Homebrew. Almost everything needed to install my preferred setup of macOS is detailed in this readme.
 
-I use [[Chezmoi]] for my dotfile management and still need to configure Mackup for application preferences. I still need to work out how to handle .macOS preferences.
+I use Chezmoi for my dotfile management and still need to configure Mackup for application preferences. I still need to work out how to handle .macOS preferences.
 
 ## A Fresh macOS Setup
 
