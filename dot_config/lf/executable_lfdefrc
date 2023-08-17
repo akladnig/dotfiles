@@ -10,7 +10,6 @@ map i  ~/.config/lf/pv.sh
 cmd open ${{
     case $(file --mime-type "$f" -bL) in
         text/*|application/json) lf-hx.sh "$f";;
-#        text/*|application/json) $EDITOR "$f";;
         *) lf-hx.sh "$f" ;;
     esac
 }}
@@ -34,8 +33,9 @@ cmd rename %mv -i $f $1
 cmd on-cd &{{
   git=$(pwd)
   cd $(pwd)
-  fmt="\033[35;1m%d\033[0m\033[1m__$git\033[0m" 
+  fmt="\033[32;1m%u@%h\033[0m:\033[34;1m%d\033[0m\033[1m%f$git\033[0m"
   lf -remote "send $id set promptfmt \"$fmt\""
+
 }}
 
 # Trash cli bindings
