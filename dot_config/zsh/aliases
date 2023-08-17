@@ -64,6 +64,7 @@ alias gs="git status"
 # | helix  |
 # +--------+
 
+alias hi="hx-layout.sh"
 alias hx=/Users/adrian/.cargo/bin/hx
 
 # +----------+
