@@ -15,11 +15,12 @@ function module.apply_to_config(config)
 
 	-- For example, changing the color scheme:
 	-- config.color_scheme = 'shades-of-purple'
-	config.color_scheme = "catppuccin-mocha"
+	config.color_scheme = "Catppuccin Mocha"
 	-- config.color_scheme = "Dracula (Official)"
+
 	config.colors = {
 		-- The default text color
-		foreground = "silver",
+		-- foreground = "silver",
 		-- The default background color
 		background = "#211B41",
 	}
