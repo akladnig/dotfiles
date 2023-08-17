@@ -111,7 +111,7 @@ brew "yaml-language-server"
 
 # Source Code Management
 brew "chezmoi"
-brew "delta"
+brew "git-delta"
 brew "gh"
 brew "lazygit"
 
