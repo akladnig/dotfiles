@@ -3,6 +3,7 @@ local helper = require 'helpers'
 
 local act = wezterm.action
 local hx = 'hx'
+local lf = 'lf'
 
 local module = {}
 
@@ -16,45 +17,49 @@ function module.apply_to_config(config)
 -- else
 -- 	 create lf pane on the left
 
-		wezterm.on('explorer', function(window, pane)
+	wezterm.on('explorer', function(window, pane)
 		local panes = pane:tab():panes()
 		local explorerPane
+		local hxPane
 		local lfPaneWidth = 60
 
 		-- Check for lf and if found set explorerPane
 		for _, paneName in ipairs(panes) do
 			local paneTitle = paneName:get_title()
 			-- if string.find(paneTitle, 'lf') ~= nil then
-			if helper.PaneExists(paneTitle, 'lf') then
+			if helper.PaneExists(paneTitle, lf) then
 				explorerPane = paneName
+			elseif  helper.PaneExists(paneTitle, hx) then
+				hxPane = paneName
 			end
 		end
 
-		if explorerPane ~= nil then
+		local activePane = pane:tab():active_pane()
+		local activePaneTitle = activePane:get_title()
+				if explorerPane ~= nil then
 			local explorerPaneColumns = explorerPane:get_dimensions().cols
 			local delta = lfPaneWidth - explorerPaneColumns
-			if explorerPaneColumns < lfPaneWidth then
-				window:perform_action(act.AdjustPaneSize {'Right', delta}, explorerPane)
-				window:perform_action(act.ActivatePaneDirection('Left'), pane)
-			else
+			-- If in the explorer pane, minimise it and go to hx pane
+			if helper.PaneExists(activePaneTitle, lf) then
 				window:perform_action(act.AdjustPaneSize {'Left', explorerPaneColumns - 1}, explorerPane)
-				window:perform_action(act.ActivatePaneDirection('Right'), pane)
+				hxPane:activate()
+			else -- in the hx or terminal pane so maximise the explorerPane
+				window:perform_action(act.AdjustPaneSize {'Right', delta}, explorerPane)
+				explorerPane:activate()
 			end
 		else
-
 			local action = wezterm.action {
 				SplitPane = {
 					direction = 'Left',
 					size = {Cells = lfPaneWidth},
-					-- command = { args = { 'lf'  } }
-					command = { args = { 'lf', '-config', '/Users/adrian/.config/lf/lfhxrc' } }
+					command = { args = { lf, '-config', '/Users/adrian/.config/lf/lfhxrc' } }
 				},
 			};
 			window:perform_action(action, pane);
 		end
 	end)
 
-	-- check if there is an explorer pane and create it if not
+-- check if there is an explorer pane and create it if not
 	-- Toggle the terminal pane on/off 
 	-- if the terminal exists
 	--	is terminal minimised 
@@ -77,7 +82,7 @@ function module.apply_to_config(config)
 		for _, paneName in ipairs(panes) do
 			local paneTitle = paneName:get_title()
 			-- if string.find(paneTitle, 'lf') ~= nil then
-			if helper.PaneExists(paneTitle, 'lf') then
+			if helper.PaneExists(paneTitle, lf) then
 				explorerPane = paneName
 			end
 		end
@@ -88,7 +93,7 @@ function module.apply_to_config(config)
 				SplitPane = {
 					direction = 'Left',
 					size = {Cells = 1},
-					command = { args = { 'lf', '-config', '/Users/adrian/.config/lf/lfhxrc' } }
+					command = { args = { lf, '-config', '/Users/adrian/.config/lf/lfhxrc' } }
 				},
 			};
 			window:perform_action(action, pane);
@@ -98,7 +103,7 @@ function module.apply_to_config(config)
 		local activePaneTitle = activePane:get_title()
 		-- Determine which pane is active and then move to the hx pane
 		-- If in the lf pane move right to the hx pane
-		if helper.PaneExists(activePaneTitle, 'lf') then
+		if helper.PaneExists(activePaneTitle, lf) then
     	window:perform_action(act.ActivatePaneDirection('Right'), pane)
     end
 
@@ -134,7 +139,6 @@ function module.apply_to_config(config)
 			window:perform_action(action, pane);
 		end
 	end)
-
 end
 
 return module
