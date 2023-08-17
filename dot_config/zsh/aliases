@@ -31,6 +31,7 @@ alias cm="chezmoi"
 alias cma="chezmoi add"
 alias cmd="chezmoi diff"
 alias cmf="chezmoi forget"
+alias cmr="chezmoi re-add"
 alias cms="chezmoi status"
 
 # +-----------------+
@@ -52,6 +53,12 @@ alias flrd="flutter run --debug"
 alias flrp="flutter run --profile"
 alias flrr="flutter run --release"
 alias flupgrd="flutter upgrade"
+
+# +--------+
+# | git    |
+# +--------+
+
+alias gs="git status"
 
 # +--------+
 # | helix  |
