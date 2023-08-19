@@ -2,3 +2,17 @@
 [[grammar]]
 name = "dart"
 source = { git = "https://github.com/UserNobody14/tree-sitter-dart", rev = "e398400a0b785af3cf571f5a57eccab242f0cdf9" }
+
+[[language]]
+name = "perl"
+scope = "source.perl"
+file-types = ["plx", "pl", "pm", "t"]
+shebangs = ["perl"]
+roots = []
+comment-token = "#"
+language-servers = [ "perlnavigator" ]
+indent = { tab-width = 2, unit = "  " }
+
+# [[grammar]]
+# name = "perl"
+# source = { git = "https://github.com/richterger/Perl-LanguageServer", rev = "d440442d6ae182ea5ffa4c09a856a4ddb9fcbf6a" } 
