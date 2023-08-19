@@ -36,7 +36,7 @@ function module.apply_to_config(config)
 
 		local activePane = pane:tab():active_pane()
 		local activePaneTitle = activePane:get_title()
-				if explorerPane ~= nil then
+		if explorerPane ~= nil then
 			local explorerPaneColumns = explorerPane:get_dimensions().cols
 			local delta = lfPaneWidth - explorerPaneColumns
 			-- If in the explorer pane, minimise it and go to hx pane
@@ -44,7 +44,10 @@ function module.apply_to_config(config)
 				window:perform_action(act.AdjustPaneSize {'Left', explorerPaneColumns - 1}, explorerPane)
 				hxPane:activate()
 			else -- in the hx or terminal pane so maximise the explorerPane
-				window:perform_action(act.AdjustPaneSize {'Right', delta}, explorerPane)
+				-- if the explorerPane is already maximised do nothing otherwise maximise it
+				if delta ~= 0 then
+					window:perform_action(act.AdjustPaneSize {'Right', delta}, explorerPane)
+				end
 				explorerPane:activate()
 			end
 		else
