@@ -44,7 +44,6 @@ function module.apply_to_config(config)
     if hxPane ~= nil and paneCount == 3 then
       hxPane:activate()
       terminalPane = pane:tab():get_pane_direction('Down')
-      window:perform_action(act.SendString(terminalPane), hxPane)
     end
     -- if there is a single pane check if it an explorer pane and then reset the explorer config otherwise close the pane
     if paneCount == 1 then
