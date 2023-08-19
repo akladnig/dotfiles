@@ -1,3 +1,4 @@
+#!bin/sh
 
 NAME=$1
 NAME=${NAME:=MyProvider}
