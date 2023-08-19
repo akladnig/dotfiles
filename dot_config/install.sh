@@ -35,6 +35,10 @@ brew bundle --file ./dotfiles/Brewfile
 #install cocoapods
 sudo gem install cocoapods
 
+#install bash LSP
+npm i -g bash-language-server
+
+#install go LSP
 go install golang.org/x/tools/gopls@latest          # LSP
 go install github.com/go-delve/delve/cmd/dlv@latest # Debugger
 go install golang.org/x/tools/cmd/goimports@latest  # Formatter
