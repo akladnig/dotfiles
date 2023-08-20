@@ -1,4 +1,4 @@
-theme = "catppuccin_mocha"
+theme = "catppuccin_mocha_purple"
 
 [editor]
 bufferline = "always"
@@ -25,7 +25,7 @@ render = true
 
 [editor.lsp]
 display-messages = true
-display-inlay-hints = true
+display-inlay-hints = false
 
 [editor.statusline]
 left = ["mode", "spinner", "version-control"]
