@@ -13,8 +13,11 @@ alias reload='source $HOME/.zshenv && source ${ZDOTDIR:-$HOME}/.zshrc'
 # | Zsh |
 # +-----+
 
-alias d='dirs -v'
-for index ({1..9}) alias "$index"="cd +${index} > /dev/null"; unset index # directory stack
+# @see: https://thevaluable.dev/zsh-install-configure-mouseless/
+# These mappings allow listing the directory stack and jumping to an entry
+# based on it's number in the listalias d='dirs -v'
+
+for index ({1..9}) alias "$index"="cd +${index} > /dev/null"; unset index
 
 alias ~='cd $HOME'
 alias '\-'='cd -'
