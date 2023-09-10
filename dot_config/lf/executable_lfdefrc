@@ -1,3 +1,4 @@
+#!bin/sh
 # mkdir command. See wiki if you want it to select created dir
 map a %mkdir<space>
 
@@ -14,18 +15,14 @@ cmd open ${{
     esac
 }}
 
-cmd mkdir ${{
-  printf "Directory Name: "
-  read ans
-  mkdir $ans
+cmd mkdir %{{
+  mkdir $1
 }}
 
-# make a file in the currently selected directory
-cmd mkfile ${{
-  printf "File Name: "
-  read ans
-  touch $(pwd)/$ans
-  lf-hx.sh $(pwd)/$ans
+# make a file in the currently selected directory and then open in Helix
+cmd mkfile %{{
+  touch $1
+  lf-hx.sh $1
 }}
 
 cmd rename %mv -i $f $1
