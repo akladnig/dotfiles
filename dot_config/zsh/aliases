@@ -104,6 +104,18 @@ alias kvim="NVIM_APPNAME=kickstart nvim"
 alias cvim="NVIM_APPNAME=NvChad nvim"
 alias avim="NVIM_APPNAME=AstroNvim nvim"
 
+# +----------------+
+# | Helix Snippets |
+# +----------------+
+
+# alias snp="stateNotifierProvider"
+
+# +----------+
+# | Wezterm  |
+# +----------+
+
+alias wcl="wezterm cli list"
+
 # +----------+
 # | Personal |
 # +----------+
