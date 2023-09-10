@@ -50,6 +50,8 @@ render = "none"
 "ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
 
 [keys.normal.space]
+# h = "jump_view_left"
+# l = "jump_view_right"
 q = ":quit"
 w = {q = ":write-quit"}
 
