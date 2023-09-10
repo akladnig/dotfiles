@@ -13,7 +13,7 @@ local module = {}
 -- the config is for them to export an `apply_to_config`
 -- function that accepts the config object, like this:
 function module.apply_to_config(config)
-	-- config.leader = { key = '+'}
+	-- config.leader = { key = ';'}
 	config.keys = {
 
 		{
@@ -37,11 +37,6 @@ function module.apply_to_config(config)
 			action = act.ActivatePaneDirection 'Next',
 		},
 		{
-			key = "r",
-			mods = "CTRL",
-			action = act.ActivatePaneDirection 'Right',
-		},
-		{
 			key = "e",
 			mods = "CTRL",
 			action = act.EmitEvent 'explorer',
@@ -52,10 +47,14 @@ function module.apply_to_config(config)
 			action = act.EmitEvent 'terminal',
 		},
 		{
-			key = "x",
+			key = "q",
 			mods = "CTRL",
 			action = act.EmitEvent 'exit-hx',
-			-- action = act.CloseCurrentPane { confirm = false },
+		},
+		{
+			key = "x",
+			mods = "CTRL",
+			action = act.EmitEvent 'helix',
 		},
 		{
 			key = "z",

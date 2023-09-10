@@ -35,5 +35,4 @@ else
   # lf -remote "send $id updir"
   lf -remote "send $id set preview false"
 fi
-
 wezterm cli activate-pane --pane-id $hx_pane_id
