@@ -8,9 +8,9 @@
 # - and more...
 #
 # Configuration documentation is available at
-#     https://dystroy.org/broot
+#     https: //dystroy.org/broot
 #
-# This file's format is Hjson ( https://hjson.github.io/ ). Some
+# This file's format is Hjson ( https: //hjson.github.io/ ). Some
 # properties are commented out. To enable them, remove the `#`.
 #
 ###############################################################
@@ -29,17 +29,17 @@
 # Date/Time format
 # If you want to change the format for date/time, uncomment the
 # following line and change it according to
-# https://docs.rs/chrono/0.4.11/chrono/format/strftime/index.html
+# https: //docs.rs/chrono/0.4.11/chrono/format/strftime/index.html
 #
 # date_time_format: %Y/%m/%d %R
 
 ###############################################################
 # uncomment to activate modal mode
 #
-# (you really should read https://dystroy.org/broot/modal/
+# (you really should read https: //dystroy.org/broot/modal/
 # before as it may not suit everybody even among vim users)
 #
-# modal: true
+modal: true
 
 ###############################################################
 # Whether to mark the selected line with a triangle
@@ -61,6 +61,7 @@ show_selection_mark: true
 #     count
 #     branch
 #     name
+#
 # ]
 
 ###############################################################
@@ -76,10 +77,11 @@ show_selection_mark: true
 ###############################################################
 # Icons
 # If you want to display icons in broot, uncomment this line
-# (see https://dystroy.org/broot/icons for installation and
+# (see https: //dystroy.org/broot/icons for installation and
 # troubleshooting)
 #
-# icon_theme: vscode
+icon_theme: vscode
+# icon_theme: nerdfont
 
 ###############################################################
 # Special paths
@@ -87,10 +89,10 @@ show_selection_mark: true
 # this section as per the examples)
 #
 special_paths: {
-    "/media" : "no-enter" // comment it if desired
-    # "/media/slow-backup-disk"    : no-enter
-    # "/home/dys/useless"    : hide
-    # "/home/dys/my-link-I-want-to-explore"    : enter
+  "/media": "no-enter" // comment it if desired
+    # "/media/slow-backup-disk": no-enter
+    # "/home/dys/useless": hide
+    # "/home/dys/my-link-I-want-to-explore": enter
 }
 
 ###############################################################
@@ -123,11 +125,12 @@ special_paths: {
 # easy to search on name rather than on the subpath.
 #
 # More information on
-#  https://dystroy.org/broot/input/#the-filtering-pattern
+#  https: //dystroy.org/broot/input/#the-filtering-pattern
 #
 # search_modes: {
 #     <empty>: fuzzy name
 #     /: regex name
+#
 # }
 
 ###############################################################
@@ -137,8 +140,11 @@ special_paths: {
 # file name depending on their extension
 #
 # ext_colors: {
-#     png: rgb(255, 128, 75)
+#     png: rgb(255,
+#          128,
+#          75)
 #     rs: yellow
+#
 # }
 
 ###############################################################
@@ -177,15 +183,15 @@ imports: [
         luma: [
             dark
             unknown
-        ]
+    ]
         # (un)comment to choose your preferred skin
-        file: skins/dark-blue.hjson
-        //file: skins/catppuccin-macchiato.hjson
-        //file: skins/catppuccin-mocha.hjson
+        // file: skins/dark-blue.hjson
+    	//file: skins/catppuccin-macchiato.hjson
+        file: skins/catppuccin-mocha.hjson
         //file: skins/dark-gruvbox.hjson
-        //file: skins/dark-orange.hjson
-        //file: skins/solarized-dark.hjson
-    }
+    	//file: skins/dark-orange.hjson
+    	//file: skins/solarized-dark.hjson
+  }
 
     # This skin is imported when your terminal is light
     {
@@ -193,5 +199,5 @@ imports: [
         # (un)comment to choose your preferred skin
         //file: skins/solarized-light.hjson
         file: skins/white.hjson
-    }
+  }
 ]
