@@ -13,6 +13,15 @@ comment-token = "#"
 language-servers = [ "perlnavigator" ]
 indent = { tab-width = 2, unit = "  " }
 
+[[language]]
+name = "haskell"
+auto-format = true
+formatter = { command = "fourmolu", args = ["--stdin"] }
+
+[[language]]
+name = "lua"
+auto-format = true
+
 # [[grammar]]
 # name = "perl"
 # source = { git = "https://github.com/richterger/Perl-LanguageServer", rev = "d440442d6ae182ea5ffa4c09a856a4ddb9fcbf6a" } 
