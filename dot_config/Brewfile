@@ -49,6 +49,7 @@ brew  "saulpw/vd/visidata"
 # Terminal and shell
 brew "btop"
 brew "exa"
+brew "eza"
 brew "fd"
 brew "fzf"
 brew "romkatv/powerlevel10k/powerlevel10k"
@@ -74,6 +75,7 @@ brew "helix"
 brew "kakoune"
 brew "neovim"
 cask "obsidian"
+cask "logseq"
 cask "visual-studio-code"
 
 # Coding Social
