@@ -35,6 +35,7 @@ verbs: [
     {
         invocation: edit
         shortcut: e
+        apply_to: file
         execution: "hi {file}"
         leave_broot: false
     }
