@@ -38,27 +38,27 @@ function module.apply_to_config(config)
 		},
 		{
 			key = "e",
-			mods = "CTRL",
+			mods = "ALT",
 			action = act.EmitEvent 'explorer',
 		},
 		{
 			key = "t",
-			mods = "CTRL",
+			mods = "ALT",
 			action = act.EmitEvent 'terminal',
 		},
 		{
 			key = "q",
-			mods = "CTRL",
+			mods = "ALT",
 			action = act.EmitEvent 'exit-hx',
 		},
 		{
 			key = "x",
-			mods = "CTRL",
+			mods = "ALT",
 			action = act.EmitEvent 'helix',
 		},
 		{
 			key = "z",
-			mods = "CTRL",
+			mods = "ALT",
 			action = act.TogglePaneZoomState,
 		}
 	}
@@ -66,4 +66,3 @@ end
 
 -- return our module table
 return module
-
