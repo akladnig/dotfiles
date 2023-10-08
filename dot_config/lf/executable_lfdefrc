@@ -22,7 +22,7 @@ cmd mkdir %{{
 # make a file in the currently selected directory and then open in Helix
 cmd mkfile %{{
   touch $1
-  lf-hx.sh $1
+  lf-hx.sh $PWD/$1
 }}
 
 cmd rename %mv -i $f $1
