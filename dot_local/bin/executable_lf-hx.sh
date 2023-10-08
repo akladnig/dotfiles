@@ -21,7 +21,9 @@ fi
 
 program=$(wezterm cli list | awk -v hx_pane_id="$hx_pane_id" '$3==hx_pane_id { print $6 }')
 # open the file in the hx pane if it exists then minimise the explorer pane
+# go into normal mode to prevent text being pasted into helix
 if [ "$program" = "hx" ]; then
+  wezterm cli send-text --pane-id $hx_pane_id --no-paste "jk"
   echo ":open ${fpath}\r" | wezterm cli send-text --pane-id $hx_pane_id --no-paste
   (( --explorer_pane_width ))
   wezterm cli adjust-pane-size --pane-id $explorer_pane_id --amount $explorer_pane_width Left
