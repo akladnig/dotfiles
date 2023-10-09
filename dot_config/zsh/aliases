@@ -56,6 +56,7 @@ alias flr="flutter run"
 alias flrd="flutter run --debug"
 alias flrp="flutter run --profile"
 alias flrr="flutter run --release"
+alias flt="flutter test"
 alias flupgrd="flutter upgrade"
 
 # +--------+
