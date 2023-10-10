@@ -20,7 +20,7 @@ cmd mkdir %{{
 }}
 
 # make a file in the currently selected directory and then open in Helix
-cmd mkfile %{{
+cmd mf %{{
   touch $1
   lf-hx.sh $PWD/$1
 }}
@@ -88,24 +88,9 @@ map t
 
 ## Make files and Directories
 map md mkdir
-map mf mkfile
 map r rename
 
 ## Trash Mappings
 map dd trash
 map tc clear_trash
 map tr restore_trash
-
-# map z push :z
-# map zi push :zi
-
-## Movement
-map gc cd ~/.config
-map gD cd ~/downloads
-map gf cd ~/Documents/Flutter
-map gd cd ~/documents
-map gl cd ~/.local
-
-# Go to current project
-map gp cd ~/Documents/Tindeq/flutter_tindeq
-map gt cd ~/Documents/Tindeq/flutter_tindeq
