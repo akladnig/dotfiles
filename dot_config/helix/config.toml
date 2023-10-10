@@ -48,6 +48,9 @@ render = "none"
 
 [keys.normal]
 "ret" = ["open_below", "normal_mode"] # Maps the enter key to open_below then re-enter normal mode
+C-v = "vsplit"
+C-h = "jump_view_left"
+C-l = "jump_view_right"
 
 [keys.normal.space]
 # h = "jump_view_left"
